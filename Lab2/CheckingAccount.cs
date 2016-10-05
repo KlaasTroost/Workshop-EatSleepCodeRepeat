@@ -18,11 +18,7 @@ namespace eu.sig.training.ch04.v1
             {
                 throw new BusinessException("Invalid account number!");
             }
-            int sum = 0;
-            for (int i = 0; i < counterAccount.Length; i++)
-            {
-                sum = sum + (9 - i) * (int)Char.GetNumericValue(counterAccount[i]);
-            }
+            int sum = SavingsAccount.Validate11Test(counterAccount);
             if (sum % 11 == 0)
             {
                 // 3. Look up counter account and make transfer object:

@@ -31,7 +31,7 @@ namespace eu.sig.training.ch04.v1
             }
         }
 
-        private static int Validate11Test(string counterAccount)
+        public static int Validate11Test(string counterAccount)
         {
             if (String.IsNullOrEmpty(counterAccount) || counterAccount.Length != 9)
             {
