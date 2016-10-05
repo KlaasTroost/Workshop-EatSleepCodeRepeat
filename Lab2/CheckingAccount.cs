@@ -14,10 +14,6 @@ namespace eu.sig.training.ch04.v1
             }
 
             // 2. Assuming result is 9-digit bank account number, validate 11-test:
-            if (String.IsNullOrEmpty(counterAccount) || counterAccount.Length != 9)
-            {
-                throw new BusinessException("Invalid account number!");
-            }
             int sum = SavingsAccount.Validate11Test(counterAccount);
             if (sum % 11 == 0)
             {
